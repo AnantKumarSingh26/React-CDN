@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  position: relative;
+  height: 100%;
+}
+.main #main {
+  width: 100%;
+  min-height: 100%;
+  background-image: url("https://cdn.prod.website-files.com/691ee828da4f054ab51063b1/692c04fcc94b4824d1ec20a5_Hero-Image-p-1600.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.main #main .navBar {
+  padding: 20px 40px;
+  min-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main #main .navBar .navLeft {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main #main .navBar .navLeft p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.main #main .navBar .navRight {
+  width: 10%;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: flex-end;
+}
+.main #main .navBar .navRight p {
+  text-decoration: underline;
+}
+.main #main .mainView {
+  height: 100%;
+  width: 100%;
+  padding: 20px 40px;
+}
+.main #main .mainView .leftSide {
+  position: absolute;
+  left: 5%; /* Align to left side */
+  top: 90%; /* Center vertically */
+  transform: rotate(-90deg) translateY(-50%);
+  transform-origin: left top;
+  color: grey;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.main #main .mainView .rightSide {
+  grid-area: rightSide;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+}
+.main #main .mainView .rightSide .stats {
+  margin-left: 140px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.main #main .mainView .rightSide .stats h2 {
+  font-size: 50px;
+  font-weight: 400;
+}
+.main #main .mainView .rightSide .stats p {
+  color: grey;
+}
+.main #main .mainView .rightSide .hello {
+  margin-left: 140px;
+  margin-top: 80px;
+}
+.main #main .mainView .rightSide .hello h1 {
+  font-size: 170px;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: monospace;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 400;
+}
+.main #main .mainView .rightSide .hello p {
+  color: grey;
+}
+.main #main .mainView .rightSide .scrollDown {
+  margin-left: 140px;
+  margin-top: 80px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.main #main .mainView .rightSide .scrollDown:hover {
+  border: 2px solid black;
+  border-radius: 20px;
+}/*# sourceMappingURL=style.css.map */
