@@ -13,21 +13,34 @@ html,
 body {
   width: 100%;
   height: 100%;
-  //   background-color: #77a4fd;
+  background-color: #e4e4e4;
 }
 .main {
+  margin-top: 85px;
   width: 100%;
-  position: relative;
-  height: 100%;
+  min-height: 100vh;
+
   #main {
     width: 100%;
-    min-height: 100%;
+    height: 100vh;
     background-image: url("https://cdn.prod.website-files.com/691ee828da4f054ab51063b1/692c04fcc94b4824d1ec20a5_Hero-Image-p-1600.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
+
     // background-color: aqua;
     .navBar {
+      /* From https://css.glass */
+      z-index: 1;
+      backdrop-filter: blur(4px) saturate(34%);
+      -webkit-backdrop-filter: blur(4px) saturate(34%);
+      background-color: rgba(17, 25, 40, 0.11);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.125);
+      position: fixed;
+      top: 0; // stick to top
+      left: 0; // align to left edge
+      width: 100%;
       padding: 20px 40px;
       min-width: 800px;
       @include flex-between;
@@ -54,6 +67,8 @@ body {
     }
 
     .mainView {
+      position: relative;
+
       height: 100%;
       width: 100%;
       padding: 20px 40px;
@@ -69,8 +84,8 @@ body {
       //     "leftSide rightSide rightSide";
       .leftSide {
         position: absolute;
-        left: 5%; /* Align to left side */
-        top: 90%; /* Center vertically */
+        left: 4.45%;
+        top: 90%;
         transform: rotate(-90deg) translateY(-50%);
         transform-origin: left top;
         color: grey;
@@ -83,7 +98,7 @@ body {
         @include flex-between;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: space-between;
+        justify-content: space-around;
         height: 100%;
         .stats {
           margin-left: 140px;
@@ -102,7 +117,7 @@ body {
         .hello {
           margin-left: 140px;
           // border: 2px solid rebeccapurple;
-          margin-top: 80px;
+          // margin-top: 80px;
           h1 {
             font-size: 170px;
             height: fit-content;
@@ -118,14 +133,92 @@ body {
         }
         .scrollDown {
           margin-left: 140px;
-          margin-top: 80px;
+          // margin-top: 10px;
+          padding: 5px 15px;
+          transition: all ease-in 0.2s;
           font-size: 20px;
           cursor: pointer;
+          border: 2px solid transparent;
           &:hover {
             border: 2px solid black;
             border-radius: 20px;
           }
         }
+      }
+    }
+  }
+  .about {
+    border: 2px solid red;
+    min-height: 50vh;
+    padding: 50px 40px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 4.5fr 1fr 4.5fr;
+    .abouutMe {
+      h2 {
+        font-size: 40px;
+        font-weight: 400;
+      }
+      p {
+        margin-top: 10%;
+        color: rgb(68, 67, 67);
+        margin-bottom: 40%;
+        font-size: 1.5rem;
+      }
+      img {
+        width: 50%;
+        display: block;
+        
+        margin: 0% auto;
+      }
+    }
+
+    .midAbout {
+      padding: 40px 30px;
+      background-color: white;
+      border-radius: 10px;
+      i {
+        padding: 10px;
+        border-radius: 50%;
+        background-color: rgb(200, 200, 200);
+        font-size: 80px;
+        color: navy;
+      }
+      h1 {
+        margin-top: 10px;
+        font-weight: normal;
+        font-size: 80px;
+      }
+      p {
+        margin-top: 20px;
+        font-size: 1.3rem;
+        color: grey;
+      }
+      img {
+        margin-top: 50px;
+        height: 340px;
+        border-radius: 20px;
+      }
+    }
+    .descAbout {
+      padding: 0px 20px;
+      img {
+        // padding: 20px ;
+        filter: grayscale(100%);
+        border-radius: 20px;
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+        transition: all ease 0.5s;
+        margin-bottom: 40%;
+        &:hover {
+          filter: grayscale(0%);
+        }
+      }
+      P {
+        font-size: 1.3rem;
+        color: rgb(75, 75, 75);
+        margin-top: 30px;
       }
     }
   }
