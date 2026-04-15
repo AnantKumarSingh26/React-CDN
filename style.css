@@ -134,7 +134,6 @@ body {
   border-radius: 20px;
 }
 .main .about {
-  border: 2px solid red;
   min-height: 50vh;
   padding: 50px 40px;
   display: grid;
